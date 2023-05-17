@@ -1,0 +1,38 @@
+<p>create-cat works!</p>
+<div class="container">
+  <div class="row w-25">
+    <input type="hidden" [(ngModel)]="cat.id" class="form-control">
+    <div class="mb-3">
+      <label class="form-label" for="name">Name:</label>
+      <input type="text" [(ngModel)]="cat.name" class="form-control">
+    </div>
+    <div class="mb-3">
+      <label class="form-label" for="breed">Breed:</label>
+      <input type="text" [(ngModel)]="cat.breed" class="form-control">
+    </div>
+    <div class="btn-group">
+      <button (click)="submit()" class="btn btn-sm btn-primary">Save</button>
+      <button (click)="clear()" class="btn btn-sm btn-secondary">Clear</button>
+    </div>
+  </div>
+  <hr>
+  <div *ngIf="done">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Id:</th>
+          <th>Name:</th>
+          <th>Breed:</th>
+          <th></th>
+      </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>{{cat.id}}</td>
+          <td>{{cat.name}}</td>
+          <td>{{cat.breed}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
